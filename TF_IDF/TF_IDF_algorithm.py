@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import re
-
 TF_IDF_COLUMN = 'Description'
 TITLE = 'Music Festival'
 
