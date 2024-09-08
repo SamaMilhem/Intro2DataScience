@@ -39,11 +39,12 @@ def analyze_music_festival(terms, output_file, input_file):
     cols = [TITLE] + [col for col in tfidf_scores]
     tfidf_scores[TITLE] = df[TITLE]
     tfidf_scores = tfidf_scores[cols]
-    tfidf_scores.to_csv(output_file, sep=',', encoding='utf-8', index=False)
+    output_path = './Output/' + output_file + '.csv'
+    tfidf_scores.to_csv(output_path, sep=',', encoding='utf-8', index=False)
 
 if __name__ == '__main__':
     terms = ["annual", "music", "festival", "soul", "jazz", "belgium", "hungary",
              "israel", "rock", "dance", "desert", "electronic", "arts"]
-    output_file_path = 'tfidf_scores.csv'
+    output_file_path = 'tfidf_scores'
     input_file_path = 'music_festivals.csv'
     analyze_music_festival(terms, output_file_path, input_file_path)
