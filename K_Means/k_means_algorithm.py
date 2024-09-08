@@ -208,4 +208,5 @@ def kmeans():
 
 
 if __name__ == '__main__':
-    kmeans()
+    kmeans() # run Kmeans
+
